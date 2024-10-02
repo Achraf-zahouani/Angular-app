@@ -1,0 +1,16 @@
+<div class="add-user-form">
+    <h2>Aggiungi Utente</h2>
+    <form (ngSubmit)="addUser()">
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" [(ngModel)]="email" name="email" required>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Aggiungi Utente</button>
+    </form>
+  </div>

@@ -1,0 +1,76 @@
+{
+  "users": [
+      {
+          "id": 1,
+          "username": "Utente1",
+          "password": "newPassword1!"
+      },
+      {
+          "id": 2,
+          "username": "Utente2",
+          "password": "newPassword2@"
+      },
+      {
+          "id": 3,
+          "username": "Utente3",
+          "password": "newPassword3#"
+      },
+      {
+          "id": 4,
+          "username": "Utente4",
+          "password": "newPassword4$"
+      },
+      {
+          "id": 5,
+          "username": "Utente5",
+          "password": "newPassword5%"
+      }
+  ],
+  "clients": [
+      {
+        "id": 1,
+        "codiceFiscale": "ABCDEF85M01H501A",
+        "nome": "Marco",
+        "cognome": "Rossi",
+        "dataDiNascita": "1995-01-15",
+        "azienda": "Global Tech",
+        "userId": 1
+      },
+      {
+        "id": 2,
+        "codiceFiscale": "XYZGHI90B01H501B",
+        "nome": "Sofia",
+        "cognome": "Neri",
+        "dataDiNascita": "1988-03-22",
+        "azienda": "Innovative Solutions",
+        "userId": 2
+      },
+      {
+        "id": 3,
+        "codiceFiscale": "LMNOPQ75D01H501C",
+        "nome": "Francesco",
+        "cognome": "Verdi",
+        "dataDiNascita": "1978-07-30",
+        "azienda": "Creative Minds",
+        "userId": 3
+      },
+      {
+        "id": 4,
+        "codiceFiscale": "QRSTUV88A01H501D",
+        "nome": "Elena",
+        "cognome": "Bianchi",
+        "dataDiNascita": "1992-11-05",
+        "azienda": "Tech Innovations",
+        "userId": 4
+      },
+      {
+        "id": 5,
+        "codiceFiscale": "WXYZAB82C01H501E",
+        "nome": "Alessandro",
+        "cognome": "Gialli",
+        "dataDiNascita": "1985-09-12",
+        "azienda": "Consulting Experts",
+        "userId": 5
+      }
+    ]
+}
