@@ -2,27 +2,27 @@
   "users": [
       {
           "id": 1,
-          "username": "Utente1",
+          "username": "utente1@example.com",
           "password": "newPassword1!"
       },
       {
           "id": 2,
-          "username": "Utente2",
+          "username": "utente2@example.com",
           "password": "newPassword2@"
       },
       {
           "id": 3,
-          "username": "Utente3",
+          "username": "utente3@example.com",
           "password": "newPassword3#"
       },
       {
           "id": 4,
-          "username": "Utente4",
+          "username": "utente4@example.com",
           "password": "newPassword4$"
       },
       {
           "id": 5,
-          "username": "Utente5",
+          "username": "utente5@example.com",
           "password": "newPassword5%"
       }
   ],

@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AddUserComponent } from './add-user.component';
-import { By } from '@angular/platform-browser';
 
 describe('AddUserComponent', () => {
   let component: AddUserComponent;
@@ -10,9 +9,9 @@ describe('AddUserComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AddUserComponent],
-      imports: [FormsModule] // Import FormsModule for ngModel binding
+      imports: [ReactiveFormsModule]
     }).compileComponents();
-
+    
     fixture = TestBed.createComponent(AddUserComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -22,40 +21,13 @@ describe('AddUserComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have initial state', () => {
-    expect(component.username).toBe('');
-    expect(component.email).toBe('');
+  it('should be invalid when empty', () => {
+    expect(component.userForm.valid).toBeFalsy();
   });
 
-  it('should add user when valid input is provided', () => {
-    spyOn(console, 'log'); // Spy on console.log to check its calls
-
-    component.username = 'testuser';
-    component.email = 'test@example.com';
-    component.addUser();
-
-    expect(console.log).toHaveBeenCalledWith('Utente aggiunto:', { username: 'testuser', email: 'test@example.com' });
-    expect(component.username).toBe('');
-    expect(component.email).toBe('');
-  });
-
-  it('should not add user when input is invalid', () => {
-    spyOn(console, 'error'); // Spy on console.error to check its calls
-
-    component.username = '';
-    component.email = '';
-    component.addUser();
-
-    expect(console.error).toHaveBeenCalledWith('Compila tutti i campi');
-  });
-
-  it('should render form elements', () => {
-    const usernameInput = fixture.debugElement.query(By.css('input[placeholder="Username"]'));
-    const emailInput = fixture.debugElement.query(By.css('input[placeholder="Email"]'));
-    const submitButton = fixture.debugElement.query(By.css('button'));
-
-    expect(usernameInput).toBeTruthy();
-    expect(emailInput).toBeTruthy();
-    expect(submitButton.nativeElement.textContent).toContain('Aggiungi Utente');
+  it('should be valid when filled', () => {
+    component.userForm.controls['name'].setValue('John Doe');
+    component.userForm.controls['email'].setValue('john.doe@example.com');
+    expect(component.userForm.valid).toBeTruthy();
   });
 });
